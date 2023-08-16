@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>t-Shirt Shop</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @products_list_order_name.each do |product| %>
+    <tr>
+        <td><%=  product.name %></td>
+        <td><%=  product.description%></td>
+        <td><%=  product.price %></td>
+        <td><%=  product.quantitiy %></td>
+    </tr>
+      <% end %>
+    </tbody>
+</table>
+
+<hr />
+
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Preço</th>
+    <th>Quantidade</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @products_list_order_price.each do |product| %>
+    <tr>
+      <td><%=  product.name %></td>
+      <td><%=  product.description%></td>
+      <td><%=  product.price %></td>
+      <td><%=  product.quantitiy %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+</body>
+</html>
