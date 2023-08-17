@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>t-Shirt Shop</title>
+</head>
+<body>
+
+<%= form_for Products.new do |f| %>
+
+  Name
+  <input type="text" name="name"><br />
+
+  Descrição
+  <textarea name="description"></textarea><br/>
+
+  Quantidade
+  <input type="number" name="quantitiy"><br />
+
+  Preço
+  <input type="number" name="price" step="0.01">
+
+  <button type="submit">Criar</button>
+<% end %>
+
+</body>
+</html>
