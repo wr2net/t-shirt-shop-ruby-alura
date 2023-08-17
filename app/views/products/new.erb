@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<%= form_for Products.new do |f| %>
+<%= form_for Product.new do |f| %>
 
   Name
   <input type="text" name="name"><br />
@@ -21,6 +21,7 @@
   <input type="number" name="price" step="0.01">
 
   <button type="submit">Criar</button>
+
 <% end %>
 
 </body>
