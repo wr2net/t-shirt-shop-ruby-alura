@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>t-Shirt Shop</title>
-</head>
-<body>
-
-<%= nav_bar brand: "Fawacom", brand_link: root_url %>
+<%#= render partial: "shared/nav" , locals: { title: "t-Shirt Shop - Cadastrar Produto" } %>
 
 <div style="height: 100px"><p></p></div>
 <%= form_for Product.new do |f| %>
@@ -49,5 +41,4 @@
 
 <% end %>
 
-</body>
-</html>
+<%#= render partial: "shared/footer" %>
