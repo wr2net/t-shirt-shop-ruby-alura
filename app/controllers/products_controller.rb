@@ -6,11 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    name = params["name"]
-    description = params["description"]
-    quantity = params["quantitiy"]
-    price = params["price"]
-
-
+    new_product = params.require(:product).permit!
+    product = Product.create new_product
   end
 end

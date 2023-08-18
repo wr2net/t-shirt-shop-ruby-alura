@@ -6,21 +6,46 @@
 </head>
 <body>
 
+<%= nav_bar brand: "Fawacom", brand_link: root_url %>
+
+<div style="height: 100px"><p></p></div>
 <%= form_for Product.new do |f| %>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group mb-3">
 
-  Name
-  <input type="text" name="name"><br />
+          <div class="input-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control form-control-lg" id="name" name="product[name]" aria-label="titulo do produto"><br />
+          </div>
 
-  Descrição
-  <textarea name="description"></textarea><br/>
+          <div class="input-group">
+            <label for="name" class="form-label">Descrição
+              <textarea class="form-control form-control-lg" name="product[description]"></textarea>
+            </label><br/>
+          </div>
 
-  Quantidade
-  <input type="number" name="quantitiy"><br />
+          <div class="input-group">
+            <label for="name" class="form-label">Quantidade</label>
+            <input type="number" class="form-control form-control-lg" name="product[quantitiy]" aria-label="Quantidade"><br />
+          </div>
 
-  Preço
-  <input type="number" name="price" step="0.01">
+          <div class="input-group">
+            <div class="input-group-text" id="btnGroupAddon">R$</div>
+            <input type="number" name="product[price]" step="0.01" class="form-control form-control-lg" aria-label="Valor do Produto" aria-describedby="btnGroupAddon">
+          </div>
 
-  <button type="submit">Criar</button>
+          <br />
+          <button class="btn btn-primary" type="submit">Criar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>
 
 <% end %>
 
