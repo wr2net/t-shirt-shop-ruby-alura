@@ -8,5 +8,13 @@ class ProductsController < ApplicationController
   def create
     new_product = params.require(:product).permit :name, :description, :quantitiy, :price
     product = Product.create new_product
+    redirect_to root_url
   end
+
+  def destroy
+    id = params[:id]
+    Product.destroy id
+    redirect_to root_url
+  end
+
 end
