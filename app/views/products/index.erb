@@ -1,47 +1,43 @@
-<%#= render partial: "shared/nav" , locals: { title: "t-Shirt Shop - Home" } %>
+  <table class="table table-bordered table-hover">
+      <thead>
+      <tr>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @products_list_order_name.each do |product| %>
+      <tr>
+          <td><%=  product.name %></td>
+          <td><%=  product.description%></td>
+          <td><%=  product.price %></td>
+          <td><%=  product.quantitiy %></td>
+      </tr>
+        <% end %>
+      </tbody>
+  </table>
 
-<table class="table table-bordered table-hover">
+  <hr />
+
+  <table class="table table-bordered table-hover">
     <thead>
     <tr>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th>Preço</th>
-        <th>Quantidade</th>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Preço</th>
+      <th>Quantidade</th>
     </tr>
     </thead>
     <tbody>
-    <% @products_list_order_name.each do |product| %>
-    <tr>
+    <% @products_list_order_price.each do |product| %>
+      <tr>
         <td><%=  product.name %></td>
         <td><%=  product.description%></td>
         <td><%=  product.price %></td>
         <td><%=  product.quantitiy %></td>
-    </tr>
-      <% end %>
+      </tr>
+    <% end %>
     </tbody>
-</table>
-
-<hr />
-
-<table class="table table-bordered table-hover">
-  <thead>
-  <tr>
-    <th>Nome</th>
-    <th>Descrição</th>
-    <th>Preço</th>
-    <th>Quantidade</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @products_list_order_price.each do |product| %>
-    <tr>
-      <td><%=  product.name %></td>
-      <td><%=  product.description%></td>
-      <td><%=  product.price %></td>
-      <td><%=  product.quantitiy %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<%#= render partial: "shared/footer" %>
+  </table>

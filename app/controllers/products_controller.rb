@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    new_product = params.require(:product).permit!
+    new_product = params.require(:product).permit :name, :description, :quantitiy, :price
     product = Product.create new_product
   end
 end
