@@ -11,6 +11,10 @@ class ProductsController < ApplicationController
     redirect_to root_url
   end
 
+  def search
+    @name_to_search = params[:name]
+    @result = Product.where "name like ?", "%#{@name_to_search}%"
+  end
   def destroy
     id = params[:id]
     Product.destroy id

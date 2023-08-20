@@ -8,11 +8,25 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
   <body>
-    <%= nav_bar brand: "Fawacom", brand_link: root_url %>
-    <div class="container">
-    <%= yield %>
+  <%= nav_bar brand: "Fawacom", brand_link: root_url do %>
+
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><%= link_to "Novo Produto", new_product_path, class: "nav-item" %></li>
+        </ul>
+        <%= form_tag search_product_path, method: :get, class: "navbar-form navbar-right" do %>
+          <div class="form-group">
+            <%= text_field_tag :name, @name_to_search, class: "form-control" %>
+            <%= button_to "Search", nil, class: "btn btn-default" %>
+          </div>
+        <% end %>
+      </div>
     </div>
+  <% end %>
+  <div class="container">
+    <%= yield %>
+  </div>
   </body>
 </html>
