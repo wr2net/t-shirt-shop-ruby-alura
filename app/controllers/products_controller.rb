@@ -7,8 +7,12 @@ class ProductsController < ApplicationController
 
   def create
     new_product = params.require(:product).permit :name, :description, :quantitiy, :price
-    product = Product.create new_product
-    redirect_to root_url
+    product = Product.new new_product
+    if product.save
+      redirect_to root_url
+    else
+      render :new
+    end
   end
 
   def search
