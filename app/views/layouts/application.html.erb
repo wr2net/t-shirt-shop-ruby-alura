@@ -17,9 +17,9 @@
           <li class="nav-item"><%= link_to "Novo Produto", new_product_path, class: "nav-item" %></li>
           <li class="nav-item"><%= link_to "Departamentos", departaments_path, class: "nav-item" %></li>
         </ul>
-        <%= form_tag search_product_path, method: :get, class: "navbar-form navbar-right" do %>
+        <%= form_tag search_product_path, method: :get, class: "navbar-new navbar-right" do %>
           <div class="form-group">
-            <%= text_field_tag :name, @name_to_search, class: "form-control" %>
+            <%= text_field_tag :name, @name_to_search, class: "new-control" %>
             <%= button_to "Search", nil, class: "btn btn-default" %>
           </div>
         <% end %>
