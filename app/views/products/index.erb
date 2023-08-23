@@ -1,9 +1,8 @@
-<% if @product_created %>
+<% if flash[:notice] %>
   <div class="alert alert-success" role="alert">
-    Produto adicionado com sucesso!
+    <%= flash[:notice] %>
   </div>
 <% end %>
-
 
 <table class="table table-bordered table-hover">
   <thead>
