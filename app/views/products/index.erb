@@ -16,22 +16,7 @@
   </tr>
   </thead>
   <tbody>
-  <% @products_list_order_name.each do |product| %>
-    <tr>
-      <td><%=  product.id %></td>
-      <td><%=  product.name %></td>
-      <td><%=  product.description%></td>
-      <td class="text-right">R$ <%=  product.price %></td>
-      <td class="text-center"><%=  product.quantitiy %></td>
-      <td class="text-center">
-        <%= button_to "Remover", product,
-                      method: :delete,
-                      class: "btn btn-danger",
-                      data: { confirm: "Tem certeza que deseja remover o produto?" } %>
-
-      </td>
-    </tr>
-  <% end %>
+  <%= render partial: "product", collection: @products_list_order_name %>
   </tbody>
 </table>
 
@@ -47,13 +32,6 @@
   </tr>
   </thead>
   <tbody>
-  <% @products_list_order_price.each do |product| %>
-    <tr>
-      <td><%=  product.name %></td>
-      <td><%=  product.description%></td>
-      <td><%=  product.price %></td>
-      <td><%=  product.quantitiy %></td>
-    </tr>
-  <% end %>
+  <%= render partial: "product", collection: @products_list_order_price %>
   </tbody>
 </table>
